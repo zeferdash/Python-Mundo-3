@@ -5,10 +5,14 @@ nums = (int(input("Digite um número: ")),
 print(f"Voce digitou os valores: {nums}")
 print(f"O valor 9 apareceu {nums.count(9)} vezes.")
 if 3 in nums:
-    print(f"O numero 3 apareceu na posicao: {nums.index(3)+1}")
+    print("O número 3 apareceu nas seguintes posições:", end=" ")
+    for i in range(len(nums)):
+        if nums[i] == 3:
+            print(i+1, end=" ")
 else:
-    print("O valor 3 nao foi digitado.")
-print("Os valores pares digitados foram: ", end=" ")
+    print("O valor 3 não foi digitado.")
+print()
+print("Os valores pares digitados foram:", end=" ")
 for n in nums:
     if n % 2 == 0:
         print(n, end=" ")
